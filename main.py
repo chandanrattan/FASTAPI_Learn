@@ -53,3 +53,8 @@ def create_todo_item(db: db_dependency, new_todo_request: TodoRequest):
     new_todo = Todos(**new_todo_request.model_dump())
     db.add(new_todo)
     db.commit()
+
+
+@app.put("/todo")
+def update_todo_item():
+    pass
